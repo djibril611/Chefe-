@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Restoran - Bootstrap Restaurant Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/page.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+             <!-- Navbar & Hero Start -->
+        <div class="container-fluid position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
+                <a href="" class="navbar-brand p-0">
+                    <img src="img/logo.png" alt="Logo" class="navbar-logo">
+                </a>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0 pe-4">
+                        <a href="/index" class="nav-item nav-link ">Home</a>
+                        <a href="/about" class="nav-item nav-link">About</a>
+                        <a href="/menu" class="nav-item nav-link active">Menu</a>
+                        <a href="/Blog" class="nav-item nav-link">Blog</a>
+                        <a href="/contact" class="nav-item nav-link">Contact</a>
+                
+                               
+                       
+                    </div>
+                    
+                </div>
+                  
+                </div>
+            </nav>
+
+            <div class="container-fluid py-5 bg-dark hero-header mb-5">
+                <div class="container text-center my-5 pt-5 pb-4">
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">Menu</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center text-uppercase">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Menu</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+                
+        <!-- Navbar & Hero End -->
+
+<!-- Menu Start -->
+
+  <!-- Menu Section -->
+  <div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h5 class="section-title ff-secondary text-center text-primary fw-normal">Menu</h5>
+            <h1 class="mb-4">Our Offerings</h1>
+            <!-- Toggle Button for Amharic -->
+            <button id="toggle-amharic" class="btn btn-outline-primary mb-3">Show in Amharic</button>
+        </div>
+
+                <!-- Tab Navigation -->
+                <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5" id="menu-tabs">
+                        <li class="nav-item">
+                            <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill" href="#food" role="tab" aria-controls="food" aria-selected="true">
+                                <i class="fa fa-utensils fa-2x text-primary"></i>
+                                <div class="ps-3">
+                                    <small class="text-body">Category</small>
+                                    <h6 class="mt-n1 mb-0">Food</h6>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#drinks" role="tab" aria-controls="drinks" aria-selected="false">
+                                <i class="fa fa-glass-martini-alt fa-2x text-primary"></i>
+                                <div class="ps-3">
+                                    <small class="text-body">Category</small>
+                                    <h6 class="mt-n1 mb-0">Drinks</h6>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content" id="menu-tabContent">
+            <!-- Food Tab Pane -->
+            <div class="tab-pane fade show active" id="food" role="tabpanel" aria-labelledby="food-tab">
+                <div class="row g-4">
+                    <!-- Food items will be loaded here dynamically -->
+                    <div id="food-menu-left" class="col-lg-6">
+                        <!-- Left side food items -->
+                    </div>
+                    <div id="food-menu-right" class="col-lg-6">
+                        <!-- Right side food items -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Drinks Tab Pane -->
+            <div class="tab-pane fade" id="drinks" role="tabpanel" aria-labelledby="drinks-tab">
+                <div class="row g-4">
+                    <!-- Drink items will be loaded here dynamically -->
+                    <div id="drink-menu-left" class="col-lg-6">
+                        <!-- Left side drink items -->
+                    </div>
+                    <div id="drink-menu-right" class="col-lg-6">
+                        <!-- Right side drink items -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+       <!-- Menu end -->
+
+       
+<!-- Footer End -->
+
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

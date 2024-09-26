@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Blog Post</title>
+
+    <!-- Quill CSS -->
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
+    <!-- Quill JS -->
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 0;
+    }
+  
+    .form-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+    }
+  
+    .form-box {
+        background-color: white;
+        border-radius: 10px;
+        padding: 40px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        width: 100%;
+    }
+  
+    .form-box h1 {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 30px;
+        color: #333;
+    }
+  
+    .form-group {
+        margin-bottom: 20px;
+    }
+  
+    label {
+        font-size: 14px;
+        color: #555;
+    }
+  
+    input[type="text"],
+    input[type="file"],
+    .quill-editor {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 14px;
+        margin-top: 5px;
+        box-sizing: border-box;
+    }
+  
+    input[type="text"]:focus,
+    input[type="file"]:focus {
+        border-color:#FEA116;
+        outline: none;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    }
+  
+    #editor {
+        height: 300px;
+        margin-top: 10px;
+        background-color: white;
+        border-radius: 5px;
+    }
+  
+    .ql-container {
+        height: 300px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+  
+    .ql-toolbar {
+        border: 1px solid #ddd;
+        border-radius: 5px 5px 0 0;
+    }
+  
+    .submit-btn {
+        width: 100%;
+        padding: 12px;
+        background-color: #FEA116;
+        border: none;
+        color: white;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-top: 20px;
+    }
+  
+    .submit-btn:hover {
+        background-color: #0056b3;
+    }
+  </style>
+  </head>
+<body>
+  <div class="form-container">
+    <div class="form-box">
+    <h1 class="text-center">Edit Blog Post</h1>
+
+    <form action="/admin/edit/<%= post._id %>" method="POST" enctype="multipart/form-data" class="form-edit-blog">
+        <div class="form-group">
+            <label for="title">Title:</label>
+            <input type="text" name="title" value="<%= post.title %>" required class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="content">Content:</label>
+            <div id="editor" class="quill-editor" style="height: 400px;"></div>
+            <input type="hidden" name="content" id="content">
+        </div>
+
+        <div class="form-group">
+            <label for="image">Upload New Image (Optional):</label>
+            <input type="file" name="image" accept="image/*" class="form-control-file">
+        </div>
+
+        <!-- Show the current image if it exists -->
+        <% if (post.image) { %>
+            <div class="form-group">
+                <p>Current Image:</p>
+                <img src="<%= post.image %>" alt="<%= post.title %>" class="img-fluid img-thumbnail" style="width: 200px;">
+            </div>
+        <% } %>
+
+        <button type="submit" class="submit-btn">Save Changes</button>
+    </form>
+</div>
+</div>
+
+      <!-- Initialize Quill editor -->
+    <script>
+      var quill = new Quill('#editor', {
+        theme: 'snow',
+        modules: {
+          toolbar: [
+            [{ 'header': [1, 2, 3, false] }], 
+            [{ 'font': [] }],
+            [{ 'align': [] }],
+            ['bold', 'italic', 'underline', 'strike'], 
+            [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+            ['blockquote', 'code-block'],
+            ['link', 'image', 'video'],
+            [{ 'color': [] }, { 'background': [] }],
+            [{ 'indent': '-1' }, { 'indent': '+1' }],
+            ['clean']
+          ]
+        }
+      });
+
+      // Prepopulate Quill with the post's content
+      quill.clipboard.dangerouslyPasteHTML(`<%- post.content %>`);  // Preload content
+
+        // Image upload handler for Quill
+        quill.getModule('toolbar').addHandler('image', function() {
+        var input = document.createElement('input');
+        input.setAttribute('type', 'file');
+        input.setAttribute('accept', 'image/*');
+        input.click();
+
+        input.onchange = function() {
+          var file = input.files[0];
+          if (file) {
+            var formData = new FormData();
+            formData.append('file', file);
+
+            // Upload the image to the server
+            fetch('/admin/upload-image', {
+              method: 'POST',
+              body: formData
+            })
+            .then(response => response.json())
+            .then(result => {
+              var imageURL = result.location;
+              var range = quill.getSelection();
+              quill.insertEmbed(range.index, 'image', imageURL);  // Insert the image into the editor
+            })
+            .catch(error => {
+              console.error('Image upload failed:', error);
+            });
+          }
+        };
+      });
+
+
+      // Handle form submission and transfer Quill's content into the hidden input
+      document.querySelector('form').onsubmit = function() {
+        var content = document.querySelector('input[name=content]');
+        content.value = quill.root.innerHTML;  // Set the Quill content in the hidden input field
+      };
+    </script>
+</body>
+</html>

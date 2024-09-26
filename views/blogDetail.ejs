@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= post.title %> | Blog</title>
+    
+       <!-- Favicon -->
+       <link href="img/favicon.ico" rel="icon">
+
+       <!-- Google Web Fonts -->
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+   
+       <!-- Icon Font Stylesheet -->
+       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+   
+       <!-- Libraries Stylesheet -->
+       <link href="/lib/animate/animate.min.css" rel="stylesheet">
+       <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+       <link href="/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+     <!-- Customized Bootstrap Stylesheet -->
+     <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+  
+      <!-- Template Stylesheet -->
+      <link href="/css/blogs.css" rel="stylesheet">
+    <!-- Bootstrap (For Grid and Utilities) -->
+   
+<style>
+
+
+
+
+.post-content {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #444;
+}
+
+.post-content p {
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.post-content h2, .post-content h3 {
+    color: #34495E;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.post-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin: 20px 0;
+}
+
+.post-content blockquote {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #f1f1f1;
+    border-left: 5px solid #FEA116;
+    font-style: italic;
+}
+
+.post-content blockquote p {
+    margin: 0;
+    font-size: 18px;
+}
+
+.post-content code {
+    background-color: #eee;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+.post-content pre {
+    background-color: #2C3E50;
+    color: #fff;
+    padding: 15px;
+    border-radius: 6px;
+    overflow-x: auto;
+}
+
+.overlay-card-text .h3{
+    color: #fff !important;
+}
+
+/* Responsive Image Styling */
+.post-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+/* Styling for recent posts */
+.recent-posts {
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+.recent-post-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+}
+
+.recent-post-item:hover {
+    background-color: #f9f9f9;
+}
+
+.recent-post-image img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.recent-post-details {
+    flex: 1;
+}
+
+.recent-post-details h5 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 5px;
+}
+
+.recent-post-details p {
+    font-size: 14px;
+    color: #777;
+}
+
+.recent-posts a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.recent-posts a:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+/* List Styling */
+.post-content ul, .post-content ol {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.post-content ul li, .post-content ol li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Like Button Styling */
+form button[type="submit"] {
+    background-color:#FEA116;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    outline: none;
+}
+
+form button[type="submit"]:hover {
+    background-color: #FEA116;
+}
+
+/* Like Button Active Animation */
+form button[type="submit"].liked {
+    background-color: #FEA116;
+    transform: scale(1.1); /* Slightly grow the button */
+    color: white;
+}
+
+form button[type="submit"].liked:hover {
+    background-color: #c0392b; /* Darker red on hover */
+}
+
+/* Like Button Ripple Effect */
+form button[type="submit"]::after {
+    content: '';
+    position: absolute;
+    width: 300%;
+    height: 300%;
+    top: 50%;
+    left: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 1;
+    border-radius: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+    transition: opacity 0.6s, transform 0.6s;
+}
+
+form button[type="submit"].liked::after {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0.4s ease-in, opacity 0.3s ease-in-out;
+}
+
+/* Card styling for full-width rows */
+.overlay-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.overlay-card-img {
+    width: 100%;
+    height: 300px; /* Adjusted height for full-width cards */
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.overlay-card-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white !important;
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.overlay-card-text h3 {
+    margin-bottom: 20px;
+    font-size: 36px; /* Larger font size for more impact */
+}
+
+.overlay-card:hover .overlay-card-img {
+    transform: scale(1.05); /* Slight zoom on hover for a more subtle effect */
+}
+
+.overlay-card .btn {
+    background-color: #FEA116;
+    border: none;
+    padding: 12px 30px;
+    font-size: 20px; /* Larger button */
+    transition: background-color 0.3s ease;
+}
+
+.overlay-card .btn:hover {
+    background-color: #FEA116; /* Darker blue on hover */
+}
+
+
+
+/* Comments Section */
+.comment-section h3 {
+    color: #2C3E50;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.comment-section .list-group-item {
+    border: none;
+    padding: 20px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.comment-section .list-group-item:last-child {
+    border-bottom: none;
+}
+
+.comment-section strong {
+    color: #FEA116;
+}
+
+.comment-section p {
+    margin-top: 5px;
+    color: #666;
+}
+
+.comment-section small {
+    color: #aaa;
+}
+
+/* Comment Form */
+.comment-form {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.comment-form label {
+    font-weight: 600;
+    color: #2C3E50;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.comment-form input, .comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.comment-form button {
+    background-color: #FEA116;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.comment-form button:hover {
+    background-color: #FEA116;
+}
+
+/* Sidebar Styling */
+.sidebar .list-group-item {
+    padding: 15px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.sidebar .list-group-item:hover {
+    background-color: #f1f1f1;
+    transform: translateY(-3px);
+}
+
+.sidebar .list-group-item img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+</style>
+</head>
+
+<body>
+
+    
+        <!-- Navbar & Hero Start -->
+          <!-- Navbar & Hero Start -->
+          <div class="container-fluid position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
+                <a href="" class="navbar-brand p-0">
+                    <img src="/img/logo.png" alt="Logo" class="navbar-logo">
+                </a>
+              
+                    <div class="navbar-nav ms-auto py-0 pe-4">
+                        <a href="/" class="nav-item nav-link ">Home</a>
+                        <a href="/about" class="nav-item nav-link active">About</a>
+                        <a href="/menu" class="nav-item nav-link">Menu</a>
+                        <a href="/blog" class="nav-item nav-link">Blog</a>
+                        <a href="/contact" class="nav-item nav-link">Contact</a>
+                        
+                               
+                       
+                    </div>
+                    
+                </div>
+                  
+                </div>
+            </nav>
+
+            <div class="container-fluid py-5 bg-dark hero-header mb-5">
+                <div class="container text-center my-5 pt-5 pb-4">
+                    <!-- Dynamically display the blog title -->
+                    <h1 class="display-3 text-white mb-3 animated slideInDown"><%= post.title %></h1>
+            
+                    <!-- Dynamically display the posted date -->
+                    <p class="text-white mb-3 animated slideInDown">Posted on: <%= new Date(post.createdAt).toLocaleDateString() %></p>
+            
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center text-uppercase">
+                            <li class="breadcrumb-item"><a href="/">Home</a></li>
+                            <li class="breadcrumb-item"><a href="/blog">Blog</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page"><%= post.title %></li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            
+        <!-- Navbar & Hero End -->
+        <!-- Navbar & Hero End -->
+    
+    <!-- Blog Content Start -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="post-content">
+                <header class="mb-4">
+                    <h1 class="display-4"><%= post.title %></h1>
+                    <p class="text-muted">Posted on <%= new Date(post.createdAt).toLocaleDateString() %></p>
+                </header>
+                
+                <!-- Blog Text -->
+                <article>
+                    <!-- Blog Image -->
+                   
+                <% if (post.image) { %>
+                    <img src="<%= post.image %>" alt="<%= post.title %>" class="img-fluid mb-4 rounded shadow-lg">
+                <% } %>
+
+                    
+                        <%- post.content %> <!-- Render raw HTML content safely -->
+                    </div>
+                </article>
+
+               
+
+                <!-- Comment Section -->
+                <section class="mt-5">
+                    <h3>Comments</h3>
+                    <div class="comments">
+                        <% if (post.comments && post.comments.length > 0) { %>
+                            <% post.comments.forEach(function(comment) { %>
+                                <div class="comment my-3 p-3 bg-light rounded shadow-sm">
+                                    <strong><%= comment.username %></strong> <span class="text-muted">says:</span>
+                                    <p class="mb-1"><%= comment.text %></p>
+                                    <span class="text-muted"><%= new Date(comment.createdAt).toLocaleDateString() %></span>
+                                </div>
+                            <% }) %>
+                        <% } else { %>
+                            <p>No comments yet. Be the first to comment!</p>
+                        <% } %>
+                    </div>
+
+                    <!-- Comment Form -->
+                    <form action="/blog/<%= post._id %>/comment" method="POST" class="mt-4">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="username" name="username" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="comment" class="form-label">Your Comment</label>
+                            <textarea class="form-control" id="comment" name="comment" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success">Submit Comment</button>
+                    </form>
+                </section>
+            </div>
+
+            <!-- Sidebar (Optional) -->
+            <div class="col-lg-4">
+                <div class="sticky-top">
+                    <!-- Recent Posts -->
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h4>Recent Posts</h4>
+                        </div>
+                        <div class="list-group list-group-flush recent-posts">
+                            <% if (recentPosts.length > 0) { %>
+                                <% recentPosts.forEach(function(post) { %>
+                                    <a href="/blog/<%= post._id %>" class="list-group-item list-group-item-action">
+                                        <div class="recent-post-item">
+                                            <!-- Display the image if it exists, otherwise use a placeholder -->
+                                            <div class="recent-post-image">
+                                                <% if (post.image) { %>
+                                                    <img src="<%= post.image %>" alt="<%= post.title %>">
+                                                <% } else { %>
+                                                    <img src="/img/placeholder.png" alt="No Image Available">
+                                                <% } %>
+                                            </div>
+                                            <div class="recent-post-details">
+                                                <h5><%= post.title %></h5>
+                                                
+                                            </div>
+                                        </div>
+                                    </a>
+                                <% }) %>
+                            <% } else { %>
+                                <p>No recent posts available.</p>
+                            <% } %>
+                        </div>
+                        
+                        <div class="container mt-5">
+                            <div class="col-12">
+                                <div class="overlay-card">
+                                    <!-- Display the specific image you want -->
+                                    <img src="/img/about03.png" alt="About Us" class="img-fluid overlay-card-img">
+                            
+                                    <!-- Fallback to placeholder image if the specific image isn't available -->
+                                    <% if (!post.image) { %>
+                                        <img src="/img/placeholder.png" alt="Placeholder" class="img-fluid overlay-card-img">
+                                    <% } %>
+                                    
+                                    <div class="overlay-card-text">
+                                        <h3>Explore Our Menu</h3>
+                                        <a href="/about" class="btn btn-primary">Menu</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        
+                            <div class="row mb-4">
+                                <!-- Full-width Card for About Us -->
+                                <div class="col-12">
+                                    <div class="overlay-card">
+                                        <!-- Display the specific image you want -->
+                                        <img src="/img/ga1.png" alt="About Us" class="img-fluid overlay-card-img">
+                                
+                                        <!-- Fallback to placeholder image if the specific image isn't available -->
+                                        <% if (!post.image) { %>
+                                            <img src="/img/placeholder.png" alt="Placeholder" class="img-fluid overlay-card-img">
+                                        <% } %>
+                                        
+                                        <div class="overlay-card-text">
+                                            <h3>Learn More About Us</h3>
+                                            <a href="/about" class="btn btn-primary">About Us</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                        
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog Content End -->
+</div>
+
+     
+ 
+
+<!-- Footer End -->
+
+    <!-- Bootstrap and Custom JS -->
+    <script>
+        document.querySelectorAll('form button[type="submit"]').forEach(button => {
+            button.addEventListener('click', function (event) {
+                // Prevent form submission initially to allow the animation to run
+                event.preventDefault(); 
+    
+                // Toggle the "liked" class for animation
+                if (!this.classList.contains('liked')) {
+                    this.classList.add('liked');
+                }
+    
+                // After a short delay, submit the form to keep the like functionality
+                setTimeout(() => {
+                    this.closest('form').submit();
+                }, 400); // Adjust delay if needed
+            });
+        });
+    </script>
+     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+     <script src="/lib/wow/wow.min.js"></script>
+     <script src="/lib/easing/easing.min.js"></script>
+     <script src="/lib/waypoints/waypoints.min.js"></script>
+     <script src="/lib/counterup/counterup.min.js"></script>
+     <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
+     <script src="/lib/tempusdominus/js/moment.min.js"></script>
+     <script src="/lib/tempusdominus/js/moment-timezone.min.js"></script>
+     <script src="/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="section-title ff-secondary text-start text-light fw-normal mb-4">Company</h4>
+                      <a class="btn btn-link" href="about.html">About Us</a>
+                
+                    <a class="btn btn-link" href="menu.html">Menu</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="section-title ff-secondary text-start text-light fw-normal mb-4">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Addis Ababa, Ethiopia</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+251 911 123 456</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@Chefa.com</p>
+                    <div class="d-flex pt-2">
+                       
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="section-title ff-secondary text-start text-light fw-normal mb-4">Opening</h4>
+                    <h5 class="text-light fw-normal">Monday - Saturday</h5>
+                    <p>09AM - 09PM</p>
+                    <h5 class="text-light fw-normal">Sunday</h5>
+                    <p>10AM - 08PM</p>
+                </div>
+    
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">Chefe</a>, All Right Reserved. 
+                        <br>
+                        Made by <a class="border-bottom" href="https://berendatech.com/">Berenda Tech</a>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     
+    
+       
+    <script src="/js/main.js"></script>
+    
+</body>
+</html>

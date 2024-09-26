@@ -1,0 +1,140 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background: #fff;
+}
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#loading-screen img {
+    width: 100px;
+    height: 100px;
+}
+.food-detail-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content */
+}
+
+.food-image-container {
+    width: 100%;
+    max-width: 600px;
+    position: relative; /* Position relative for absolute positioning of button */
+    margin-bottom: 20px; /* Add space between image and details */
+}
+
+.food-image {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+}
+
+.close-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.food-details {
+    text-align: left; /* Align text to the left */
+    max-width: 600px;
+    width: 100%; /* Make sure the details take full width */
+}
+
+.tags {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px; /* Space between tags and title */
+}
+
+.tag {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+    background-color: #FEA116; /* Set all tags to green */
+}
+
+.food-details h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.food-details .price {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: right; /* Right align the price */
+}
+
+.food-description {
+    font-size: 18px;
+    color: gray;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .food-detail-content {
+        padding: 10px;
+    }
+
+    .food-image-container {
+        max-width: 100%;
+    }
+
+    .food-details {
+        max-width: 100%;
+    }
+}
+
+/* Delivery Button Styles */
+.delivery-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.delivery-button {
+    background-color:  #FEA116;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%; /* Full width */
+    max-width: 600px; /* Maximum width to match container */
+}
+
+.delivery-button:hover {
+    background-color:#0F172B;
+}

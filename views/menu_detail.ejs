@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chefa</title>
+    <link rel="stylesheet" href="css/food.css">
+</head>
+
+<body>
+    
+
+    <main class="food-detail-content">
+        <div class="food-image-container">
+            <img id="food-image" src="" alt="Food Image" class="food-image">
+            <button class="close-button" onclick="window.history.back();">&times;</button>
+        </div>
+
+        <div class="food-details">
+            <div class="tags" id="tags">
+                <!-- Tags will be dynamically inserted here -->
+            </div>
+
+            <h2 id="food-name">Food Name</h2>
+            <p class="food-description" id="food-description">Food Description</p>
+            <p class="price" id="food-price">Food Price</p>
+
+            <div class="delivery-button-container">
+                <a id="delivery-button" href="tel:0737660898" class="delivery-button">Call for Delivery</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/food_detail.js"></script>
+</body>
+
+</html>

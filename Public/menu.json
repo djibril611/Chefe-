@@ -1,0 +1,52 @@
+{
+  "menuItems": {
+    "food": [
+      { "nameEn": "Kitfo", "nameAm": "ክትፎ(Fonotuma)", "price": "700", "description": "This is food description if needed", "image": "img/Ki.png" },
+      { "nameEn": "Cororsaa", "nameAm": "ጮሮርሳ(Cororsaa)", "price": "2000", "description": "This is food description if needed", "image": "img/Cororsaa.png" },
+      { "nameEn": "Cororsaa - Half", "nameAm": "ጮሮርሳ-1/2(Cororsaa)", "price": "1000", "description": "This is food description if needed", "image": "img/Cororsaa1.png" },
+      { "nameEn": "Ukkaamsaa", "nameAm": "አፋኝ(በሬ)(Ukkaamsaa)", "price": "300", "description": "", "image": "img/Ukkaamsaa.png" },
+      { "nameEn": "Ukkaamsaa - Dma", "nameAm": "አፋኝ(ፍየል)(Ukkaamsaa)", "price": "700", "description": "This is food description if needed", "image": "img/UkkaamsaaD.png" },
+      { "nameEn": "Ancootee - Normal", "nameAm": "አንጮቴ(Ancootee) - ባለስልጣነ", "price": "300", "description": "This is food description if needed", "image": "img/menu-2.jpg" },
+      { "nameEn": "Ancootee - Special", "nameAm": "አንጮቴ(Ancootee) - ዲስን", "price": "450", "description": "This is food description if needed", "image": "img/menu-1.jpg" },
+      { "nameEn": "Chechebsa - Normal", "nameAm": "ጨጨብሳ(Caccabsaa) - ባለስልጣነ", "price": "300", "description": "This is food description if needed", "image": "img/Chechebsa.png" },
+      { "nameEn": "Chechebsa - Special", "nameAm": "ጨጨብሳ(Caccabsaa) - ዲስን", "price": "450", "description": "This is food description if needed", "image": "img/Chechebsa1.png" },
+      { "nameEn": "Genfo", "nameAm": "ገንፎ(Marqaa)", "price": "300", "description": "This is food description if needed", "image": "img/Genfo1.png" },
+      { "nameEn": "Afefelli", "nameAm": "ቅቅል(Afefelli)", "price": "300", "description": "This is food description if needed", "image": "img/Kekel.png" },
+      { "nameEn": "Kochee", "nameAm": "ጥብስ(Kochee)", "price": "200", "description": "This is food description if needed", "image": "img/Tibs1.png" },
+      { "nameEn": "Kochee - beef", "nameAm": "ዱለት(በሬ)(Kochee)", "price": "150", "description": "This is food description if needed", "image": "img/Du.png" },
+      { "nameEn": "Kochee - Special", "nameAm": "ዱለት-ስፔሻል", "price": "250", "description": "This is food description if needed", "image": "img/Du1.png" },
+      { "nameEn": "Caffee", "nameAm": "ጨፌ(Caffee)", "price": "150", "description": "This is food description if needed", "image": "img/Caffee.png" },
+      { "nameEn": "Caffee", "nameAm": "ጨፌ(Caffee)", "price": "200", "description": "This is food description if needed", "image": "img/Caffee.png" },
+      { "nameEn": "Muranna", "nameAm": "ቁርጥ(Muranna)", "price": "150", "description": "This is food description if needed", "image": "img/Kur.png" },
+      { "nameEn": "Akabi", "nameAm": "ቁርጥ(Akabi)", "price": "200", "description": "This is food description if needed", "image": "img/Kur2.png" },
+      { "nameEn": "Shaklla", "nameAm": "ሸክላ", "price": "200", "description": "This is food description if needed", "image": "img/Shek01.png" },
+      { "nameEn": "Shaklla - Half", "nameAm": "ሸክላ-1/2", "price": "150", "description": "This is food description if needed", "image": "img/Shek2.png" },
+      { "nameEn": "Gazlayitii - Half", "nameAm": "ጋዝ ላይት - 1/2", "price": "200", "description": "This is food description if needed", "image": "img/Gaz.png" },
+      { "nameEn": "Gazlayitii", "nameAm": "ጋዝ ላይት", "price": "250", "description": "This is food description if needed", "image": "img/Gaz1.png" },
+      { "nameEn": "Injera wth Cheese", "nameAm": "እንጀራ በአይብ", "price": "250", "description": "This is food description if needed", "image": "img/II.png" }
+    ],
+    "drinks": [
+      { "nameEn": "Gold Label", "nameAm": "ጎልድ ሌብል", "normalPrice": "10,000", "vipPrice": "11,000", "description": "This is drink description if needed", "image": "img/GL.png" },
+      { "nameEn": "Double Black Label", "nameAm": "ደብል ብላክ ላቤል", "normalPrice": "7,000", "vipPrice": "7,500", "description": "This is drink description if needed", "image": "img/DBL.png" },
+      { "nameEn": "Black Label", "nameAm": "ብላክ ላቤል", "normalPrice": "7,000", "vipPrice": "7,500", "description": "This is drink description if needed", "image": "img/BL.png" },
+      { "nameEn": "Gorden Gin", "nameAm": "ጎርደን ጅን", "normalPrice": "5,000", "vipPrice": "5,500", "description": "This is drink description if needed", "image": "img/Gin.png" },
+      { "nameEn": "Gorden Gin Double", "nameAm": "ጎርደን ጅን ደብል", "normalPrice": "250", "vipPrice": "300", "description": "This is drink description if needed", "image": "img/DGin.png" },
+      { "nameEn": "Amarula Double", "nameAm": "አምራል ደብል", "normalPrice": "250", "vipPrice": "300", "description": "This is drink description if needed", "image": "img/A.png" },
+      { "nameEn": "Awash Tekshno", "nameAm": "አዋሽ ተከሽኖ", "normalPrice": "700", "vipPrice": "1,000", "description": "This is drink description if needed", "image": "img/AS.png" },
+      { "nameEn": "Kemila", "nameAm": "ከሚላ", "normalPrice": "500", "vipPrice": "700", "description": "This is drink description if needed", "image": "img/Kem.png" },
+      { "nameEn": "Akeshia", "nameAm": "አኬሺያ", "normalPrice": "150", "vipPrice": "200", "description": "This is drink description if needed", "image": "img/AK.png" },
+      { "nameEn": "Guder", "nameAm": "ጉደር", "normalPrice": "700", "vipPrice": "1,000", "description": "This is drink description if needed", "image": "img/Gud.png" },
+      { "nameEn": "Aksumite", "nameAm": "አክሱማይት", "normalPrice": "700", "vipPrice": "1,000", "description": "This is drink description if needed", "image": "img/Ja.png" },
+      { "nameEn": "Jaguarmaster Shut", "nameAm": "ጀጉርማስተር ሽት", "normalPrice": "200", "vipPrice": "250", "description": "This is drink description if needed", "image": "img/Ja.png" },
+      { "nameEn": "Fernit Shut", "nameAm": "ፈርንት ሻት", "normalPrice": "200", "vipPrice": "250", "description": "This is drink description if needed", "image": "img/Fi.png" },
+      { "nameEn": "Soft Drink", "nameAm": "ለስላሳ", "normalPrice": "500", "vipPrice": "700", "description": "This is drink description if needed", "image": "img/drink-1.jpg" },
+      { "nameEn": "Tej", "nameAm": "ጠጅ", "normalPrice": "40", "vipPrice": "100", "description": "This is drink description if needed", "image": "img/Tej.png" },
+      { "nameEn": "Water 1 Letr", "nameAm": "ወሃ 1 ሌትር", "normalPrice": "30", "vipPrice": "50", "description": "This is drink description if needed", "image": "img/L1.png" },
+      { "nameEn": "Water Half Letr", "nameAm": "ወሃ 1/2 ሌትር", "normalPrice": "25", "vipPrice": "50", "descriptio+n": "This is drink description if needed", "image": "img/L2.pmg" },
+      { "nameEn": "Water 2 Letr", "nameAm": "ወሃ 2 ሌትር", "normalPrice": "60", "vipPrice": "100", "description": "This is drink description if needed", "image": "img/L02.png" },
+      { "nameEn": "Beer", "nameAm": "ቢራ", "normalPrice": "70", "vipPrice": "100", "description": "This is drink description if needed", "image": "img/Beer.png" },
+      { "nameEn": "Beer", "nameAm": "እ/ቢራ", "normalPrice": "60", "vipPrice": "100", "description": "This is drink description if needed", "image": "img/Beer.png" },
+      { "nameEn": "Yogurt", "nameAm": "እርጎ", "normalPrice": "80", "vipPrice": "100", "description": "This is drink description if needed", "image": "img/yo.png" }
+    ]
+  }
+}

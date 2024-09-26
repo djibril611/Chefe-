@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    
+    <!-- Bootstrap and CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+  
+    <!-- Template Stylesheet -->
+    <link href="/css/page.css" rel="stylesheet">
+    
+    <style>
+        .dashboard-card {
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .dashboard-card:hover {
+            transform: scale(1.05);
+        }
+
+        .dashboard-header {
+            margin-bottom: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .table thead th {
+            background-color: #f8f9fa;
+        }
+
+        .table tbody td {
+            vertical-align: middle;
+        }
+
+        .action-links a {
+            margin-right: 10px;
+        }
+
+        .stats-card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            text-align: center;
+            color: #fff;
+        }
+
+        .stats-card .icon {
+            font-size: 40px;
+            margin-right: 15px;
+        }
+
+        .stats-card .content {
+            flex-grow: 1;
+        }
+
+        .stats-card.bg-primary {
+            background-color: #007bff;
+        }
+
+        .stats-card.bg-success {
+            background-color: #28a745;
+        }
+
+        .stats-card.bg-warning {
+            background-color: #ffc107;
+        }
+
+        .stats-card.bg-danger {
+            background-color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="dashboard-header text-center">Admin Dashboard</h1>
+
+
+        <!-- Blog Post Management Section -->
+        <div class="card">
+            <div class="card-header bg-dark text-white">
+                Manage Blog Posts
+            </div>
+            <div class="card-body">
+                <a href="/admin/create-blog" class="btn btn-primary mb-3">Create New Blog Post</a>
+                
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Title</th>
+                            <th>Posted Date</th>
+                            <th>Views</th>
+                          
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% if (posts.length > 0) { %>
+                            <% posts.forEach(function(post) { %>
+                                <tr>
+                                    <td>
+                                        <% if (post.image) { %>
+                                            <img src="<%= post.image %>" alt="<%= post.title %>" class="img-fluid" style="max-width: 100px;">
+                                        <% } else { %>
+                                            <img src="/img/placeholder.png" alt="No Image" class="img-fluid" style="max-width: 100px;">
+                                        <% } %>
+                                    </td>
+                                    <td><%= post.title %></td>
+                                    <td><%= new Date(post.createdAt).toLocaleDateString() %></td>
+                                    <td><%= post.views %> Views</td>
+                                   
+                                    <td class="action-links">
+                                        <a href="/admin/edit/<%= post._id %>" class="btn btn-sm btn-warning">Edit</a>
+                                        <a href="/admin/delete/<%= post._id %>" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this post?');">Delete</a>
+                                    </td>
+                                </tr>
+                            <% }) %>
+                        <% } else { %>
+                            <tr>
+                                <td colspan="6" class="text-center">No blog posts available.</td>
+                            </tr>
+                        <% } %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- For icons -->
+</body>
+</html>

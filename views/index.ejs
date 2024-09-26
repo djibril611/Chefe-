@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Restoran Chefa</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container--fluid bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <section>
+            <div class="container-fluid position-relative p-0">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
+                    <a href="" class="navbar-brand p-0">
+                        <img src="img/chefe.png" alt="Logo" class="navbar-logo transparent-logo">
+    <img src="img/logo.png" alt="Logo" class="navbar-logo scrolled-logo d-none">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="navbar-nav ms-auto py-0 pe-4">
+                            <a href="/" class="nav-item nav-link active">Home</a>
+                            <a href="/about" class="nav-item nav-link">About</a>
+                            <a href="/menu" class="nav-item nav-link">Menu</a>
+                            <a href="/blog" class="nav-item nav-link">Blog</a>
+                            <a href="/contact" class="nav-item nav-link">Contact</a>
+                           
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </section>
+        
+       <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="hero-header d-flex align-items-center" style="background-image: url('img/show00.png');">
+                        <div class="container">
+                            <div class="row align-items-center g-5">
+                                <div class="col-lg-6 text-center text-lg-start">
+                                    <h1 class="display-3 text-white">Delicious Traditional <br>Oromo Dining</h1>
+                                    <p class="text-white mb-4">We made it first and we made it unique. Come for the organic meals, stay for the drinks.</p>
+                                    <a href="/menu" class="btn btn-primary py-sm-3 px-sm-5 me-3">See Menu</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="hero-header d-flex align-items-center" style="background-image: url('img/show02.png');">
+                        <div class="container">
+                            <div class="row align-items-center g-5">
+                                <div class="col-lg-6 text-center text-lg-start">
+                                    <h1 class="display-3 text-white">Immerse Yourself in Oromo Heritage</h1>
+                                    <p class="text-white mb-4">Discover the rich culture and authentic ambiance that make every visit unforgettable.</p>
+                                    <a href="about.html" class="btn btn-primary py-sm-3 px-sm-5 me-3">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="hero-header d-flex align-items-center" style="background-image: url('img/show2.png');">
+                        <div class="container">
+                            <div class="row align-items-center g-5">
+                                <div class="col-lg-6 text-center text-lg-start">
+                                    <h1 class="display-3 text-white">Experience Tradition</h1>
+                                    <p class="text-white mb-4">Discover Oromo cuisine, crafted with care and passion to bring you a unique experience.</p>
+                                    <a href="about.html" class="btn btn-primary py-sm-3 px-sm-5 me-3">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <div class="hero-header d-flex align-items-center" style="background-image: url('img/show3.png');">
+                        <div class="container">
+                            <div class="row align-items-center g-5">
+                                <div class="col-lg-6 text-center text-lg-start">
+                                    <h1 class="display-3 text-white">Explore Our Menu</h1>
+                                    <p class="text-white mb-4">Taste the authenticity of our Oromo traditional dishes, prepared with fresh local ingredients.</p>
+                                    <a href="menu.html" class="btn btn-primary py-sm-3 px-sm-5 me-3">See Menu</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 4 -->
+                <div class="carousel-item">
+                    <div class="hero-header d-flex align-items-center" style="background-image: url('img/show4.png');">
+                        <div class="container">
+                            <div class="row align-items-center g-5">
+                                <div class="col-lg-6 text-center text-lg-start">
+                                    <h1 class="display-3 text-white">Learn More About Us</h1>
+                                    <p class="text-white mb-4">Get to know the story behind our rich heritage and our commitment to quality.</p>
+                                    <a href="about.html" class="btn btn-primary py-sm-3 px-sm-5 me-3">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 5 -->
+                <div class="carousel-item">
+                    <div class="hero-header d-flex align-items-center" style="background-image: url('img/show7.png');">
+                        <div class="container">
+                            <div class="row align-items-center g-5">
+                                <div class="col-lg-6 text-center text-lg-start">
+                                    <h1 class="display-3 text-white">The Perfect Pour, Every Time</h1>
+                                    <p class="text-white mb-4">From cocktails to fine spirits, our bar serves the best drinks to complete your Cheffe experience.</p>
+                                    <a href="menu.html" class="btn btn-primary py-sm-3 px-sm-5 me-3">See Menu</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 6 -->
+                <div class="carousel-item">
+                    <div class="hero-header d-flex align-items-center" style="background-image: url('img/show8.png');">
+                        <div class="container">
+                            <div class="row align-items-center g-5">
+                                <div class="col-lg-6 text-center text-lg-start">
+                                    <h1 class="display-3 text-white">Sip Into Tradition</h1>
+                                    <p class="text-white mb-4">Discover the legacy of Oromo cuisine through every glass of Tej – a drink that brings history to life.</p>
+                                    <a href="about.html" class="btn btn-primary py-sm-3 px-sm-5 me-3">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 7 -->
+                <div class="carousel-item">
+                    <div class="hero-header d-flex align-items-center" style="background-image: url('img/show9.png');">
+                        <div class="container">
+                            <div class="row align-items-center g-5">
+                                <div class="col-lg-6 text-center text-lg-start">
+                                    <h1 class="display-3 text-white">Delicious Dishes Await</h1>
+                                    <p class="text-white mb-4">Enjoy the best traditional dishes with a modern twist at our restaurant.</p>
+                                    <a href="menu.html" class="btn btn-primary py-sm-3 px-sm-5 me-3">See Menu</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+        
+        
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        
+        <section>
+    
+        <!-- About Start -->
+        <div class="container-fluid py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="row g-3">
+                             <div class="col-6 text-start">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" src="img/about04.png">
+                            </div>
+                            <div class="col-6 text-start">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.3s" src="img/about02.png" style="margin-top: 25%;">
+                            </div>
+                            <div class="col-6 text-end">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s" src="img/about01.png">
+                            </div>
+                            <div class="col-6 text-end">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s" src="img/about03.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h5 class="section-title ff-secondary text-start text-primary fw-normal">About Us</h5>
+                        <h1 class="mb-4">Welcome to <img src="img/ic.png" alt="Icon" style="width: 50px; height: 50px;"> Chefe Restaurant</h1>
+                        <p class="mb-4">Chefe Restaurant opened its doors on July 12th, 2022, offering a fresh and modern approach to Oromo traditional cuisine. It is part of a proud culinary tradition started by Maashoo Coffee, which was established on January 6th, 2010, as the first Oromo traditional restaurant in Addis Ababa/Finfinne. Though they are located in different parts of the city, both establishments share the same ownership and commitment to celebrating the rich flavors of Oromo heritage. Together, they provide a warm and authentic dining experience that honors Oromo culture and cuisine.</p>
+                        <div class="row g-4 mb-4">
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center border-start border-5 border-primary px-3">
+                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">14</h1>
+                                    <div class="ps-4">
+                                        <p class="mb-0">Years of</p>
+                                        <h6 class="text-uppercase mb-0">Cultural Excellence</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center border-start border-5 border-primary px-3">
+                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">50</h1>
+                                    <div class="ps-4">
+                                        <p class="mb-0">Dedicated</p>
+                                        <h6 class="text-uppercase mb-0">Team Members</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="btn btn-primary py-3 px-5 mt-2" href="about.html">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- About End -->
+
+
+        <!-- Menu Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Food Menu</h5>
+                    <h1 class="mb-4">Our Specialized Menu Items</h1>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="special-item text-center">
+                            <div class="image-box mb-3">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s" src="img/special.jpg">
+                            </div>
+                            <h5 class="mt-3">ጨፌ ስፔሻል (Caffee Special)</h5>
+                            <p class="small">Explore our unique Caffee Special made with the finest local ingredients.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="special-item text-center">
+                            <div class="image-box mb-3">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s" src="img/special2.jpg">
+                            </div>
+                            <h5 class="mt-3">ጮሮርሳ (Cororsaa)</h5>
+                            <p class="small">A traditional delicacy, Cororsaa, that brings the authentic taste of Oromo culture.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="special-item text-center">
+                            <div class="image-box mb-3">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s" src="img/special3.jpg">
+                            </div>
+                            <h5 class="mt-3">አንጮቴ (Ancootee)</h5>
+                            <p class="small">Experience the flavors of Ancootee, a specialty dish perfect for any occasion.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-5">
+                    <a href="menu.html" class="btn btn-primary py-3 px-5">Explore our Menu Further</a>
+                </div>
+            </div>
+        </div>
+        
+        
+                <!-- Menu End -->
+    <!-- Service Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item rounded pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-utensils text-primary mb-4"></i>
+                            <h5>Authentic Cuisine</h5>
+                            <p>We bring you the flavors of Oromo culture with dishes made from cherished family recipes and fresh, local ingredients.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item rounded pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-globe text-primary mb-4"></i>
+                            <h5>Cultural Experience</h5>
+                            <p>At Chefe, dining is an experience. Immerse yourself in the rich traditions and warm hospitality of the Oromo people.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item rounded pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-user-tie text-primary mb-4"></i>
+                            <h5>Master Chefs</h5>
+                            <p>Our chefs are passionate about their craft, creating each dish with love and a deep respect for Oromo culinary traditions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item rounded pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-headset text-primary mb-4"></i>
+                            <h5>Fast Service</h5>
+                            <p>We value your time and strive to provide quick, friendly service, ensuring you have a delightful and hassle-free dining experience.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Service End -->
+
+
+
+
+        <!-- Team Start -->
+        <div class="container-xxl pt-5 pb-3">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Team Members</h5>
+                    <h1 class="mb-5">Our Talented Team</h1>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="team-item text-center rounded overflow-hidden">
+                            <div class="rounded-circle overflow-hidden m-4 team-image-container">
+                                <img class="img-fluid" src="img/gech1.png" alt="Gizachew Tolera">
+                            </div>
+                            <h5 class="mb-0">Gizachew Tolera</h5>
+                            <small>Founder</small>
+                            <div class="d-flex justify-content-center mt-3">
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="team-item text-center rounded overflow-hidden">
+                            <div class="rounded-circle overflow-hidden m-4 team-image-container">
+                                <img class="img-fluid" src="img/tefd.png" alt="Dereje Husen">
+                            </div>
+                            <h5 class="mb-0">Dereje Husen</h5>
+                            <small>Position</small>
+                            <div class="d-flex justify-content-center mt-3">
+                              
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="team-item text-center rounded overflow-hidden">
+                            <div class="rounded-circle overflow-hidden m-4 team-image-container">
+                                <img class="img-fluid" src="img/man.jpg" alt="Hiwot Mesay">
+                            </div>
+                            <h5 class="mb-0">Chera Tilahun</h5>
+                            <small>Position</small>
+                            <div class="d-flex justify-content-center mt-3">
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="team-item text-center rounded overflow-hidden">
+                            <div class="rounded-circle overflow-hidden m-4 team-image-container">
+                                <img class="img-fluid" src="img/sena.png" alt="Sena Agari">
+                            </div>
+                            <h5 class="mb-0">Sena Agari</h5>
+                            <small>Position</small>
+                            <div class="d-flex justify-content-center mt-3">
+                              
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.9s">
+                        <div class="team-item text-center rounded overflow-hidden">
+                            <div class="rounded-circle overflow-hidden m-4 team-image-container">
+                                <img class="img-fluid" src="img/Sifen.jpg" alt="Sifan Wude">
+                            </div>
+                            <h5 class="mb-0">Sifan Wude</h5>
+                            <small>Position</small>
+                            <div class="d-flex justify-content-center mt-3">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="1.1s">
+                        <div class="team-item text-center rounded overflow-hidden">
+                            <div class="rounded-circle overflow-hidden m-4 team-image-container">
+                                <img class="img-fluid" src="img/Hawi.jpg" alt="Hawi Bayane">
+                            </div>
+                            <h5 class="mb-0">Hawi Bayane</h5>
+                            <small>Position</small>
+                            <div class="d-flex justify-content-center mt-3">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Team End -->
+        <!-- Team End -->
+
+
+        <!-- Testimonial Start -->
+        <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="text-center">
+                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Blog</h5>
+                    <h1 class="mb-5">From Our Kitchen</h1>
+                </div>
+                <div class="owl-carousel testimonial-carousel">
+                    <div class="testimonial-item bg-transparent border rounded p-4">
+                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                        <p>At Chefe, we believe in the power of tradition. Our dishes are prepared with the finest organic ingredients, staying true to the rich heritage of Oromo cuisine. From our signature spiced lamb to the freshest injera, every meal tells a story of culture and flavor.</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/blog-1.png" style="width: 50px; height: 50px;">
+                            <div class="ps-3">
+                                <h5 class="mb-1">Traditional Delicacies</h5>
+                                <small>Discover the Flavors</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-transparent border rounded p-4">
+                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                        <p>Chefe is more than just a restaurant; it’s a community hub where people come together to enjoy food, culture, and company. Our warm atmosphere and friendly service make every visit a memorable experience.</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/blog-1.png" style="width: 50px; height: 50px;">
+                            <div class="ps-3">
+                                <h5 class="mb-1">Community & Culture</h5>
+                                <small>Connecting Through Food</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-transparent border rounded p-4">
+                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                        <p>From the fields to your plate, we take pride in sourcing local, organic ingredients that reflect the essence of Oromo agriculture. Our commitment to sustainability ensures that every dish supports local farmers and the environment.</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/blog-1.png" style="width: 50px; height: 50px;">
+                            <div class="ps-3">
+                                <h5 class="mb-1">Organic & Local</h5>
+                                <small>Sustainable Dining</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-transparent border rounded p-4">
+                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                        <p>We’re always innovating, bringing new twists to traditional recipes while preserving their authentic flavors. Our chefs blend creativity with heritage, resulting in a menu that offers something exciting for everyone.</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/blog-1.png" style="width: 50px; height: 50px;">
+                            <div class="ps-3">
+                                <h5 class="mb-1">Innovation in Tradition</h5>
+                                <small>Modern Takes on Classics</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Testimonial End -->
+        
+
+        <!-- Footer Start -->
+       <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+				<!-- Footer Start -->
+                 
+                    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="container py-5">
+                            <div class="row g-5">
+                                <div class="col-lg-3 col-md-6">
+                                    <h4 class="section-title ff-secondary text-start text-light fw-normal mb-4">Company</h4>
+                                      <a class="btn btn-link" href="about.html">About Us</a>
+                                
+                                    <a class="btn btn-link" href="menu.html">Menu</a>
+                                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <h4 class="section-title ff-secondary text-start text-light fw-normal mb-4">Contact</h4>
+                                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Addis Ababa, Ethiopia</p>
+                                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+251 911 123 456</p>
+                                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@Chefa.com</p>
+                                    <div class="d-flex pt-2">
+                                       
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <h4 class="section-title ff-secondary text-start text-light fw-normal mb-4">Opening</h4>
+                                    <h5 class="text-light fw-normal">Monday - Saturday</h5>
+                                    <p>09AM - 09PM</p>
+                                    <h5 class="text-light fw-normal">Sunday</h5>
+                                    <p>10AM - 08PM</p>
+                                </div>
+                    
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="copyright">
+                                <div class="row">
+                                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                                        &copy; <a class="border-bottom" href="#">Chefe</a>, All Right Reserved. 
+                                        <br>
+                                        Made by <a class="border-bottom" href="https://berendatech.com/">Berenda Tech</a>
+                                    </div>
+                                    <div class="col-md-6 text-center text-md-end">
+                                        <div class="footer-menu">
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+<!-- Footer End -->
+
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
